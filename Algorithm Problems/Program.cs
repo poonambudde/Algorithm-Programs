@@ -6,27 +6,29 @@ namespace Algorithm_Problems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Algorithm Programs");
-
-            bool isPrime = true;
-            Console.WriteLine("Prime Numbers Between 0 To 1000 :- ");
-            for (int i = 2; i <= 1000; i++)
+            int[] intArray = new int[5];
+            Console.WriteLine("Enter the Array Elements : ");
+            for (int i = 0; i < intArray.Length; i++)
             {
-                for (int j = 2; j <= 1000; j++)
+                intArray[i] = int.Parse(Console.ReadLine());
+            }
+            //Sorting the array
+            for (int j = 0; j <= intArray.Length - 2; j++)
+            {
+                for (int i = 0; i <= intArray.Length - 2; i++)
                 {
-
-                    if (i != j && i % j == 0)
+                    if (intArray[i] > intArray[i + 1])
                     {
-                        isPrime = false;
-                        break;
+                        int temp = intArray[i + 1];
+                        intArray[i + 1] = intArray[i];
+                        intArray[i] = temp;
                     }
-
                 }
-                if (isPrime)
-                {
-                    Console.Write(i + " ");
-                }
-                isPrime = true;
+            }
+            Console.WriteLine("After Sorting Array Sorted order is :");
+            foreach (int item in intArray)
+            {
+                Console.Write(item + " ");
             }
         }
     }

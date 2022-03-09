@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 
 namespace Algorithm_Problems
 {
@@ -6,30 +7,39 @@ namespace Algorithm_Problems
     {
         static void Main(string[] args)
         {
-            int[] intArray = new int[5];
-            Console.WriteLine("Enter the Array Elements : ");
-            for (int i = 0; i < intArray.Length; i++)
+            Console.WriteLine("Welcome to Algorithm Programs");
+
+            List<string> list = new List<string>();
+            int n;
+            Console.WriteLine("Enter the size of list");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter words in the list");
+            for (int k = 0; k < n; k++)
             {
-                intArray[i] = int.Parse(Console.ReadLine());
+                list.Add(Console.ReadLine());
             }
-            //Sorting the array
-            for (int j = 0; j <= intArray.Length - 2; j++)
+            Console.WriteLine("Plz Enter the word that has to be searched");
+            string word = Console.ReadLine();
+            list.Sort();
+            int i = 0, j = n - 1;
+            bool found = false;
+            while (i <= j)
             {
-                for (int i = 0; i <= intArray.Length - 2; i++)
+                int mid = (i + j) / 2;
+                if (list[mid].CompareTo(word) == 0)
                 {
-                    if (intArray[i] > intArray[i + 1])
-                    {
-                        int temp = intArray[i + 1];
-                        intArray[i + 1] = intArray[i];
-                        intArray[i] = temp;
-                    }
+                    found = true;
+                    break;
                 }
+                else if (list[mid].CompareTo(word) < 0)
+                    i = mid + 1;
+                else
+                    j = mid - 1;
             }
-            Console.WriteLine("After Sorting Array Sorted order is :");
-            foreach (int item in intArray)
-            {
-                Console.Write(item + " ");
-            }
+            if (found == true)
+                Console.WriteLine("Word is Found");
+            else
+                Console.WriteLine("Word is not found");
         }
     }
 }

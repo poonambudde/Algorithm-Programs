@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Algorithm_Problems
@@ -13,12 +13,12 @@ namespace Algorithm_Problems
             int n;
             Console.WriteLine("Enter the size of list");
             n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the words of list");
+            Console.WriteLine("Enter words in the list");
             for (int k = 0; k < n; k++)
             {
                 list.Add(Console.ReadLine());
             }
-            Console.WriteLine("enter the word that has to be searched");
+            Console.WriteLine("Plz Enter the word that has to be searched");
             string word = Console.ReadLine();
             list.Sort();
             int i = 0, j = n - 1;
@@ -37,9 +37,9 @@ namespace Algorithm_Problems
                     j = mid - 1;
             }
             if (found == true)
-                Console.WriteLine("Element Found");
+                Console.WriteLine("Word is Found");
             else
-                Console.WriteLine("Element not found");
+                Console.WriteLine("Word is not found");
         }
     }
 }

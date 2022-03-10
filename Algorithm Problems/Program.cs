@@ -5,41 +5,27 @@ namespace Algorithm_Problems
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("Welcome to Algorithm Programs");
 
-            List<string> list = new List<string>();
-            int n;
-            Console.WriteLine("Enter the size of list");
-            n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the words of list");
-            for (int k = 0; k < n; k++)
+            string str1 = "heart";
+            string str2 = "earth";
+            char[] ch1 = str1.ToLower().ToCharArray();
+            char[] ch2 = str2.ToLower().ToCharArray();
+            Array.Sort(ch1);
+            Array.Sort(ch2);
+            string val1 = new string(ch1);
+            string val2 = new string(ch2);
+
+            if (val1 == val2)
             {
-                list.Add(Console.ReadLine());
+                Console.WriteLine("Both the strings are Anagrams");
             }
-            Console.WriteLine("enter the word that has to be searched");
-            string word = Console.ReadLine();
-            list.Sort();
-            int i = 0, j = n - 1;
-            bool found = false;
-            while (i <= j)
-            {
-                int mid = (i + j) / 2;
-                if (list[mid].CompareTo(word) == 0)
-                {
-                    found = true;
-                    break;
-                }
-                else if (list[mid].CompareTo(word) < 0)
-                    i = mid + 1;
-                else
-                    j = mid - 1;
-            }
-            if (found == true)
-                Console.WriteLine("Element Found");
             else
-                Console.WriteLine("Element not found");
+            {
+                Console.WriteLine("Both the strings are not Anagrams");
+            }
         }
     }
 }

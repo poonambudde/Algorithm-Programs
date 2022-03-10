@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Algorithm_Problems
@@ -7,8 +7,6 @@ namespace Algorithm_Problems
     {
         public static void Main()
         {
-            Console.WriteLine("Welcome to Algorithm Programs");
-
             string str1 = "heart";
             string str2 = "earth";
             char[] ch1 = str1.ToLower().ToCharArray();

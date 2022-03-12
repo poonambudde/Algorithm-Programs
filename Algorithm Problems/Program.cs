@@ -6,30 +6,12 @@ namespace Algorithm_Problems
     {
         static void Main(string[] args)
         {
-            int[] intArray = new int[5];
-            Console.WriteLine("Enter the Array Elements : ");
-            for (int i = 0; i < intArray.Length; i++)
-            {
-                intArray[i] = int.Parse(Console.ReadLine());
-            }
-            //Sorting the array
-            for (int j = 0; j <= intArray.Length - 2; j++)
-            {
-                for (int i = 0; i <= intArray.Length - 2; i++)
-                {
-                    if (intArray[i] > intArray[i + 1])
-                    {
-                        int temp = intArray[i + 1];
-                        intArray[i + 1] = intArray[i];
-                        intArray[i] = temp;
-                    }
-                }
-            }
-            Console.WriteLine("After Sorting Array Sorted order is :");
-            foreach (int item in intArray)
-            {
-                Console.Write(item + " ");
-            }
+            Console.WriteLine("Welcome to Data Sructures Algorithm Programs");
+
+            Console.WriteLine("Enter String to find Permutation ");
+            string str = Console.ReadLine();
+            int n = str.Length;
+            Permutations.Permutate(str, 0, n - 1);
         }
     }
 }

@@ -1,15 +1,18 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Algorithm_Problems
 {
-    class Permutations
+    class Program
     {
+        public static void Main()
+        {
             Console.WriteLine("Welcome to Data Sructures Algorithm Programs");
-      
-            InsertionSort insertionSort = new InsertionSort();
-            insertionSort.Insertion_Sort();
+
+            FindNumber findNumber = new FindNumber();
+            findNumber.Find();
+
+            findNumber.Question(12, 23);
         }
     }
 }

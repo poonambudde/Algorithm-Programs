@@ -26,6 +26,12 @@ namespace Algorithm_Problems
             {
                 Console.WriteLine("Both the strings are not Anagrams");
             }
+            Console.WriteLine("Welcome to Data Sructures Algorithm Programs");
+
+            Console.WriteLine("Enter String to find Permutation ");
+            string str = Console.ReadLine();
+            int n = str.Length;
+            Permutations.Permutate(str, 0, n - 1);
         }
     }
 }

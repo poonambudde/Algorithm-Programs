@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Algorithm_Problems
@@ -12,7 +12,7 @@ namespace Algorithm_Problems
             FindNumber findNumber = new FindNumber();
             findNumber.Find();
 
-            //findNumber.Question(12, 23);
+            findNumber.Question(12, 23);
         }
     }
 }
